@@ -1,0 +1,26 @@
+extends templates/page
+include includes/navbar
+
+block title
+  | Startseite
+
+block body
+  +navbar('inverse').navbar-fixed-top
+    +navbar-default-content
+
+  block main
+    .container
+      .jumbotron
+        h1 This is a test
+        //- ul!= sayHelloTo('Jarvis')
+      ul
+        each val in (1).upto(100)
+          li #{val} kurze#{val == 1 ? 's' : ''} Vergnügen
+      .carousel(data-ride="carousel")
+        .carousel-inner
+          .item.active
+            h1 Hallo
+          .item
+            h1 Welt
+          .item
+            h1 3

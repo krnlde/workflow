@@ -1,0 +1,20 @@
+{
+  "name": "workflow",
+  "main": "index.js",
+  "version": "1.0.0",
+  "authors": [
+    "Kai Dorschner <me@krnl.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}
