@@ -1,6 +1,8 @@
-- var uniqueId = 0;
+//
 mixin navbar(type)
+  - uniqueId = uniqueId || 0;
   - uniqueId++;
+
   .navbar(class="navbar-#{type || 'default'}")&attributes(attributes)
     .container
       .navbar-header

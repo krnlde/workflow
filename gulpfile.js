@@ -37,7 +37,7 @@ gulp.task('jade2html', ['styles'], () => {
     //.pipe($.cached('jade2html'))
     .pipe($.data((currentFile) => require('./framework') ))
     .pipe($.jade({
-      debug: true,
+      //debug: true,
       pretty: true
     }))
     .pipe(wiredep({
