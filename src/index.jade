@@ -15,7 +15,7 @@ block body
         //- ul!= sayHelloTo('Jarvis')
       ul
         each val in (1).upto(100)
-          li #{val} kurze#{val == 1 ? 's' : ''} Vergnügen
+          li= t('sheeps', val)
       .carousel(data-ride="carousel")
         .carousel-inner
           .item.active
