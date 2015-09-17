@@ -1,0 +1,17 @@
+//
+- carouselItems = carouselItems || []
+- uniqueId = uniqueId || 0;
+mixin carousel(count)
+  - uniqueId++;
+  .carousel.slide(data-ride="carousel" id="carousel-#{uniqueId}")
+    ol.carousel-indicators
+      - for (var i = 0; i < count; i += 1)
+        li(data-target="#carousel-#{uniqueId}" data-slide-to=i class=(i == 0 ? 'active' : ''))
+    .carousel-inner
+      block
+    a.left.carousel-control(href='#carousel-#{uniqueId}', role='button', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+      span.sr-only Previous
+    a.right.carousel-control(href='#carousel-#{uniqueId}', role='button', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+      span.sr-only Next

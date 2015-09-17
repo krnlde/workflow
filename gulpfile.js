@@ -30,8 +30,8 @@ gulp.task('start-server', ['jade2html'], () => {
   })
 })
 
-gulp.task('jade2html', ['styles'], () => {
-  return gulp.src(['src/**/*.jade', '!src/template/**', '!src//**/_*.jade'])
+gulp.task('jade2html', ['styles', 'fonts'], () => {
+  return gulp.src(['src/**/*.jade', '!src/includes/**', '!src/templates/**', '!src//**/_*.jade'])
     .pipe($.plumber({errorHandler: $.notify.onError({title: 'Jade Compiler', message: '<%= error.message %>'})})) // Important for not breaking the pipe
     .pipe($.debug())
     //.pipe($.cached('jade2html'))
@@ -65,6 +65,10 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('.tmp/assets/css'))
 })
 
+gulp.task('fonts', () => {
+  return gulp.src('src/assets/fonts/**/*.*')
+    .pipe(gulp.dest('.tmp/assets/fonts'))
+})
 
 gulp.task('liveReload', () => {
   return gulp.src('.tmp/*.html')
@@ -79,6 +83,7 @@ gulp.task('watch', () => {
   gulp.watch(['src/assets/less/**/*.less'], ['styles-watcher'])
   gulp.watch(['src/**/*.jade'], ['jade2html'])
 })
+
 
 // TODO
 /**

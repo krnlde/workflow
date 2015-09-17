@@ -1,5 +1,6 @@
 extends templates/page
 include includes/navbar
+include includes/carousel
 
 block title
   | Startseite
@@ -17,11 +18,16 @@ block body
         each val in (1).upto(100)
           li #{val} sheep#{val == 1 ? '' : 's'}
           //- t('sheeps', val)
-      .carousel(data-ride="carousel")
-        .carousel-inner
-          .item.active
+      +carousel(3)
+        .item.active
+          .well
             h1 Hallo
-          .item
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In tenetur blanditiis minus cum minima harum inventore quas iure aliquid ex ut, facilis eaque earum. Rerum eos laudantium veniam vero esse quos. In esse, minus voluptatum blanditiis illum neque quo architecto reprehenderit inventore? Facere enim fugiat, molestiae dolor neque incidunt cum provident, facilis doloribus, explicabo nobis aspernatur officia magni magnam. Eum autem quia dolores vel dolor. A laboriosam at repellat libero officia, magni officiis, cum est ipsam ab. Officia iusto qui assumenda atque distinctio in, saepe adipisci eum veniam similique at rerum, repellat ut voluptates aspernatur ipsam praesentium alias eligendi. Quibusdam.
+        .item
+          .well
             h1 Welt
-          .item
-            h1 3
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ab quaerat voluptatem cupiditate quam doloremque doloribus vel, rerum quisquam nesciunt, sunt nobis esse mollitia vero repellat soluta nostrum asperiores veniam iusto est consequuntur. Nihil soluta explicabo iste. Mollitia et hic provident voluptas, quae cumque est minima eos, suscipit totam. Quos recusandae voluptate quidem dolorum. Alias at, ipsam asperiores laborum molestias fugit officiis in recusandae quibusdam explicabo ullam sapiente sunt sed suscipit accusantium! Ad dicta quisquam culpa fuga molestias voluptatum nulla, quae, quidem esse asperiores omnis quibusdam vitae eos debitis labore, magnam amet voluptates, reprehenderit ipsum enim! Fugiat quisquam laborum libero?
+        .item
+          .well
+            h1 Lorem ipsum dolor sit.
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora labore accusamus molestiae quia dignissimos unde consectetur dolore harum provident iste, dolorem corporis voluptatibus recusandae, doloribus? At odio quia eveniet, deleniti natus nulla asperiores, eligendi consectetur, veniam odit vel sint, mollitia ex neque laudantium? Voluptatibus quos et dignissimos deleniti molestiae iure voluptatum expedita, maxime dolorum, ea ipsa. Ipsum quas ab exercitationem soluta, velit, cum optio dolorum perspiciatis dicta. Veritatis voluptate porro nobis, provident amet ipsum nulla voluptatem mollitia, perspiciatis quia at autem iste laudantium, sunt odit quos consequuntur repudiandae a non?
