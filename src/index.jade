@@ -12,12 +12,10 @@ block body
   block main
     .container
       .jumbotron
-        h1 This is a test
-        //- ul!= sayHelloTo('Jarvis')
-      ul
-        each val in (1).upto(100)
-          li #{val} sheep#{val == 1 ? '' : 's'}
-          //- t('sheeps', val)
+        .row
+          .col-md-5
+            h1 Lorem ipsum dolor.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quod modi debitis earum, nostrum assumenda autem. Cupiditate voluptate amet voluptatem.
       +carousel(3)
         .item.active
           .well
