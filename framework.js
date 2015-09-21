@@ -6,7 +6,7 @@ const YAML = require('yamljs');
 const language = 'de-DE';
 module.exports.t = t;
 
-const translation = YAML.load('translation_' + language + '.yml');
+const translation = YAML.load('src/translations_' + language + '.yml');
 
 console.log(translation);
 
