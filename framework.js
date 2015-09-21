@@ -7,26 +7,28 @@ module.exports.sayHelloTo = function sayHelloTo(name) {
   return ret
 }
 
+const translation = {
+  'sheeps': '%d sheep(s)'
+}
 
-// const translation = {
-//   'sheeps': '%d sheep(s)'
-// }
+module.exports.t = function t(token, count, ...rest) {
+  const formatStrings = count !== undefined ? [count].concat(rest) : rest;
+  let translated = translate(token);
+  if (count !== undefined) translated = pluralize(translated, count);
+  return format(translated, formatStrings);
+}
 
-// module.exports.t = function t(token, count, ...rest) {
-//   const formatStrings = count !== undefined ? [count].concat(rest) : rest;
-//   let template = translate(token);
-//   if (count !== undefined) template = pluralize(template);
-//   return format(translated, formatStrings);
-//   return token;
-// }
+function translate(token) {
+  return translation[token];
+}
 
-// function translate(token) {
-//   return translation[token];
-// }
-
-// function pluralize(text, count) {
-//   const parts = text.match(/(.+?)\((.+?)\)/)
-//   const plural = parts ? parts[2] : ''
-//   const singular = plural.split('|')[0] == plural ? parts[1] : plural.split('|')[0]
-//   console.log({parts, plural, singular});
-// }
+function pluralize(text, count) {
+  return text.replace(/\((.+?)\)/g, (substring, match) => {
+    const split = match.split('|');
+    if (split.length > 1) {
+      return (count == 1) ? split[0] : split[1];
+    }
+    if (count != 1) return split[0];
+    return '';
+  });
+}
