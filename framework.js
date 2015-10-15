@@ -8,7 +8,7 @@ module.exports.t = t;
 
 const translation = YAML.load('src/translations_' + language + '.yml');
 
-console.log(translation);
+// console.log(translation);
 
 function t(token, count, ...rest) {
   const formatStrings = (count !== undefined) ? [count].concat(rest) : rest;

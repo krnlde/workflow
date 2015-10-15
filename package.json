@@ -5,7 +5,7 @@
   "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp --harmony_destructuring --harmony_modules --harmony_rest_parameters --harmony_spread_arrays --harmony_spreadcalls",
+    "start": "gulp --harmony_destructuring --harmony_rest_parameters --harmony_spread_arrays --harmony_spreadcalls",
     "install": "npm dedupe && bower install"
   },
   "author": "",
