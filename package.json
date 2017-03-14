@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp --harmony_destructuring --harmony_rest_parameters --harmony_spread_arrays --harmony_spreadcalls",
-    "install": "npm dedupe && bower install"
+    "install": "npm dedupe && bower install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +25,7 @@
     "gulp-inject": "^2.2.0",
     "gulp-jade": "^1.1.0",
     "gulp-less": "^3.0.3",
-    "gulp-load-plugins": "^0.10.0",
+    "gulp-load-plugins": "^1.2.3",
     "gulp-notify": "^2.2.0",
     "gulp-open": "^1.0.0",
     "gulp-plumber": "^1.0.1",
@@ -33,8 +35,10 @@
     "path": "^0.12.7",
     "run-sequence": "^1.1.2",
     "sugar": "^1.4.1",
-    "wiredep": "^2.2.2",
+    "wiredep": "^3.0.1",
     "yamljs": "^0.2.4",
-    "yargs": "^3.24.0"
-  }
+    "yargs": "^3.24.0",
+    "snyk": "^1.25.2"
+  },
+  "snyk": true
 }
