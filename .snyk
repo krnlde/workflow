@@ -30,3 +30,32 @@ patch:
         patched: '2017-04-26T09:28:40.936Z'
     - gulp-jade > jade > transformers > uglify-js:
         patched: '2017-04-26T09:28:40.936Z'
+  'npm:ms:20170412':
+    - gulp-connect > tiny-lr > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > connect-timeout > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > express-session > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > finalhandler > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > morgan > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > serve-index > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > tiny-lr > body-parser > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > body-parser > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > compression > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > connect-timeout > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > serve-static > send > debug > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > serve-static > send > ms:
+        patched: '2017-05-23T02:35:12.186Z'
+    - gulp-connect > connect > serve-favicon > ms:
+        patched: '2017-05-23T02:35:12.186Z'
