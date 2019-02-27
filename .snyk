@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.8.0
+version: v1.13.3
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:fresh:20170908':
@@ -113,3 +113,6 @@ patch:
   'npm:marked:20170907':
     - gulp-notify > node-notifier > cli-usage > marked:
         patched: '2017-11-08T12:18:58.685Z'
+  'npm:mime:20170907':
+    - gulp-connect > connect > serve-static > send > mime:
+        patched: '2019-02-27T10:06:00.437Z'
