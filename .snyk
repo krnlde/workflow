@@ -115,4 +115,4 @@ patch:
         patched: '2017-11-08T12:18:58.685Z'
   'npm:mime:20170907':
     - gulp-connect > connect > serve-static > send > mime:
-        patched: '2019-07-11T10:06:51.251Z'
+        patched: '2019-07-11T10:07:58.266Z'
